@@ -1,0 +1,139 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alifian | Frontend Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+<header class="header">
+  <div class="logo">ALIFIAN</div>
+
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero fade-in">
+  <div class="hero-text">
+    <h1>Frontend Developer</h1>
+    <p>Building clean, scalable, responsive web experiences, and Available for Remote work.</p>
+
+    <a href="https://github.com/Alian1995"
+       target="_blank"
+       class="btn-primary">
+       Look My Portfolio
+    </a>
+  </div>
+
+  <div class="hero-img">
+    <img src="img/alifian-candra.png" alt="Profile Photo">
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section fade-in">
+  <h2>About Me</h2>
+  <p>
+    I am a frontend developer focused on building modern,
+    responsive, and user-friendly web applications.
+    Passionate about clean code and scalable design systems.
+  </p>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade-in">
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="project-grid">
+
+    <!-- Mochihamuya -->
+    <a href="https://alian1995.github.io/Mochihamuya_hamster/"
+       target="_blank"
+       class="project-card">
+
+      <div class="project-overlay"></div>
+
+      <div class="project-content">
+        <h3>Landing Page Project</h3>
+        <p>Responsive business landing page with clean UI.</p>
+        <p class="tech">HTML • CSS • Responsive Design</p>
+        <span class="project-link">View Live Project →</span>
+      </div>
+    </a>
+
+    <!-- Task Manager -->
+    <a href="https://alian1995.github.io/task-manager/"
+       target="_blank"
+       class="project-card">
+
+      <div class="project-overlay"></div>
+
+      <div class="project-content">
+        <h3>Task Management App</h3>
+        <p>Interactive task manager with add, delete and local storage.</p>
+        <p class="tech">HTML • CSS • JavaScript • LocalStorage</p>
+        <span class="project-link">View Code →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section fade-in">
+  <h2>Get in Touch</h2>
+
+  <div class="contact-buttons">
+    <a href="mailto:alifiancandra73@gmail.com" class="btn-outline">Email Me</a>
+    <a href="https://wa.me/62881080261275" target="_blank" class="btn-outline">WhatsApp</a>
+    <a href="https://github.com/Alian1995" target="_blank" class="btn-outline">GitHub</a>
+  </div>
+</section>
+
+
+  <footer>
+    © 2026 Alifian. All rights reserved.
+  </footer>
+
+  <!-- Fade In Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>
